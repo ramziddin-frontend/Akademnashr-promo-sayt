@@ -6,6 +6,11 @@ body {
   color: #252420;
 }
 
+/* *:focus {
+  outline: 4px solid #040302;
+  outline-offset: 3px;
+} */
+
 
 .main-link {
   font-family: 'Roboto';
@@ -21,8 +26,11 @@ body {
 .site-header {
   display: flex;
   align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
   background-color: #fff;
   justify-content: space-between;
+  border-top: 5px solid #FF7500;
 }
 
 .link-logo {
@@ -46,6 +54,17 @@ body {
 .sitenav-list {
   list-style: none;
   display: flex;
+  padding: 0;
+  margin: 0;
+  margin-right: 32px;
+}
+
+.sitenav-items {
+  margin-right: 32px;
+}
+
+.sitenav-items:last-child {
+  margin-right: 0;
 }
 
 .sitenav-link {
@@ -71,12 +90,19 @@ body {
 }
 
 .main-link {
+  padding: 12px 24px;
+  display: inline-block;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.5px;
   font-size: 13px;
   line-height: 15px;
-  background-color: #ff7500;
+  background-color: #FF7500;
   color: #FFFFFF;
   text-decoration: none;
   transition: opacity 0.4s ease;
+  border-radius: 4px;
 
 }
 
@@ -84,7 +110,7 @@ body {
   opacity: 0.8;
 }
 
-.main-link {
+.main-link:active {
   opacity: 0.6;
 }
 
@@ -94,6 +120,8 @@ body {
   justify-content: space-between;
   background-color: #252420;
   color: #fff;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .hero-content {
@@ -116,22 +144,41 @@ body {
 .hero-img {
   width: 510px;
   height: 510px;
+  border-radius: 8px;
 }
 
 .orange-line {
   width: 80px;
   height: 3px;
-
+  border: none;
   background: #FF7500;
+  margin: 0;
+  margin-bottom: 40px;
 }
 
 .hero-heading {
+  margin-top: 0;
+  margin-bottom: 24px;
   font-size: 40px;
   line-height: 1.2;
   letter-spacing: 0.5px;
 }
 
+.hero-text {
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+/* features */
+
+.features {
+  padding-top: 210px;
+  padding-bottom: 210px;
+}
+
 .features-heading {
+  margin-top: 0;
+  margin-bottom: 72px;
   width: 440px;
   font-size: 72px;
   line-height: 1.2;
@@ -149,13 +196,24 @@ body {
   display: flex;
   list-style: none;
   justify-content: space-between;
+  padding: 0;
 }
 
 .feature {
   width: 340px;
+  margin-right: 40px;
 }
 
+.feature:last-child{
+  margin-right: 0;
+}
+
+
 .feature-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
   width: 100px;
   height: 100px;
   background-color: rgba(255, 117, 0, 0.2);
@@ -179,11 +237,14 @@ body {
 }
 
 .promo {
+  border-radius: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: rgba(37, 36, 32, 1);
   color: #FFFFFF;
+  padding-top: 120px;
+  padding-bottom: 160px;
 
 }
 
@@ -192,6 +253,8 @@ body {
 }
 
 .promo-heading {
+  margin-top: 0;
+  margin-bottom: 24px;
   font-family: 'Roboto Condensed';
   font-style: normal;
   font-weight: 700;
@@ -204,6 +267,19 @@ body {
   color: #FFFFFF;
 }
 
+.promo-info-wrapper {
+  margin-bottom: 24px;
+}
+
+.promo-text {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.promo-text:last-child {
+  margin-right: 0;
+}
+
 .promo-highlight {
   color: #ff7500;
 }
@@ -212,11 +288,13 @@ body {
   width: 440px;
   height: 440px;
   object-fit: cover;
+  border-radius: 12px;
 }
 
 .site-footer {
   background-color: #F8F8F8;
-
+  padding-top: 56px;
+  padding-bottom: 56px;
 }
 
 .site-footer-top {
@@ -227,10 +305,26 @@ body {
 
 .socials {
   display: flex;
+  padding: 0;
+  margin: 0;
 }
 
+.socials li {
+  margin-right: 16px;
+}
+
+.socials li:last-child {
+  margin-right: 0;
+}
+
+
 .socials a {
-  color:#252420
+  color:#252420;
+  display: block;
+}
+
+.socials svg {
+  display: block;
 }
 
 .socials a:hover {
@@ -247,8 +341,11 @@ body {
 
 .site-footer-divider {
   line-height: 19px;
+  margin-top: 40px;
+  margin-bottom: 54px;
   background: rgba(37, 36, 32, 0.5);
   height: 2px;
+  border: 0;
 }
 
 .site-footer-bottom {
@@ -258,6 +355,14 @@ body {
 .site-footer-links {
    width: 224px;
    line-height: 19px;
+   padding: 0;
+   margin: 0;
+   margin-right: 68px;
+   list-style: none;
+}
+
+.site-footer-links:last-child {
+  margin-right: 0;
 }
 
 .site-footer-links a {
@@ -269,6 +374,6 @@ body {
   color: #ff7500;
 }
 
-.site-footer-links a:focus {
+.site-footer-links a:active {
   opacity: 0.6;
 }
